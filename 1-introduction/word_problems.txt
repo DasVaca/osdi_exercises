@@ -1,0 +1,81 @@
+/* No right answers are guarantee */
+
+Q1. 
+What are the two main functions of an os?
+A1. 
+Provide abstraction to the user/programmer (from hardware) and
+managing resources.
+
+
+Q2.
+What is the difference between kernel mode and user mode?
+Why is the difference important to an os?
+A2.
+A program running on kernel mode has direct access to the hardware,
+meanwhile user mode programs have to request the kernel for such operations.
+...
+
+
+Q3.
+What is multiprogramming?
+A3.
+Loading multiple programs so that if one is on idle mode then
+the other could execute without having to change tapes or unload the
+previous program, this was achieved partitionating the computer disk/memory.
+
+
+Q4.
+What is spooling? 
+Do you think that advanced pc will have spooling as standard feature in the future?
+A4.
+The ability to read jobs (from tapes/cards) onto the computer disk so they can 
+be used as soon as another jobs ends.
+I am in the future, so answering now is kinda weird.
+
+
+Q5. On early computers, every byte of data read or written was directly handled
+by the CPU (i.e. there was no Direct Memory Access).
+What implications does this organization have for multiprogramming?
+A5.
+
+
+Q6.
+Why was timesharing not widespread on 2nd-gen computers?
+A6.
+The risk to lose a day of work was to high, since programmers didn't have
+the machine for themselves they couldn't debug the programs on runtime, 
+therefore they have to wait until the results were given by the batch people.
+
+
+Q7.
+Which of the following instructions should be allowed only in kernel mode?
+a) Disable all interrupts
+b) Read the time-of-day clock
+c) Set the time-of-day clock
+d) Change the memory map
+A7.
+All of them.
+
+
+Q8.
+List some differences between pc os and mainframe os.
+A8.
+
+
+Q9. 
+Give one reason why a closed-source propietary system like Windows 
+should have better quality than open-source os like Linux; and viceversa.
+A9.
+
+
+Q10.
+A MINIX file whose owner has UID=12 and GID=1 has mode 
+rwxr-x---
+Another user with UID=6 and GID=1 tries to execute the file.
+What will happen?
+A10.
+I will execute the file because they are in the same group.
+
+
+Q11.
+A11.
