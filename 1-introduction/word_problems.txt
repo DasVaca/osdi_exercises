@@ -12,16 +12,18 @@ What is the difference between kernel mode and user mode?
 Why is the difference important to an os?
 A2.
 A program running on kernel mode has direct access to the hardware,
-meanwhile user mode programs have to request the kernel for such operations.
+on the other hand user mode programs have to request the kernel for such operations.
 ...
 
 
 Q3.
 What is multiprogramming?
 A3.
-Loading multiple programs so that if one is on idle mode then
-the other could execute without having to change tapes or unload the
-previous program, this was achieved partitionating the computer disk/memory.
+Loading multiple programs so that if one is on an operation
+that does not require cpu time then another programms 
+could execute without having to change tapes or unload the
+previous program, this was achieved partitionating the computer disk/memory 
+(so that each programs has a designated space to work freely).
 
 
 Q4.
@@ -37,6 +39,8 @@ Q5. On early computers, every byte of data read or written was directly handled
 by the CPU (i.e. there was no Direct Memory Access).
 What implications does this organization have for multiprogramming?
 A5.
+Multiprogramming could not be achieve efficently because a program requesting 
+to read/write a file (wich most programs do) would constantly needs cpu time.
 
 
 Q6.
