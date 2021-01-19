@@ -70,6 +70,9 @@ Q9.
 Give one reason why a closed-source propietary system like Windows 
 should have better quality than open-source os like Linux; and viceversa.
 A9.
+1: Hackers will have a hard time figuring out bugs so there could be a more secure
+software (better quality).
+2: Since the source is open bugs can be spotted and fixed fairly easy and fast.
 
 
 Q10.
