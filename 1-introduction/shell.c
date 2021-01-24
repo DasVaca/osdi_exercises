@@ -6,6 +6,8 @@
 
 #define BUFFSIZE 256
 
+const char * builtins[] = {"cd", "history", "exit"};
+
 
 int ntoken(char * s, char token) {
     /* return how many of 'token' are in 's' */
@@ -119,10 +121,8 @@ int main()
 
             if (execvp(args[0], args) == -1) {
                 puts("\nCouldn't execute command\n");    
+                break;
             } 
-
-            break;
-            
         } else {
             // error
             puts("Couldn't fork");
