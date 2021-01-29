@@ -72,7 +72,7 @@ should have better quality than open-source os like Linux; and viceversa.
 A9.
 1: Hackers will have a hard time figuring out bugs so there could be a more secure
 software (better quality).
-2: Since the source is open bugs can be spotted and fixed fairly easy and fast.
+2: Since the source is open,bugs can be spotted and fixed fairly easy and fast.
 
 
 Q10.
@@ -84,5 +84,28 @@ A10.
 I will execute the file because they are in the same group.
 
 
-Q11.
-A11.
+Q11. In view of the fact that the mere existence of a superuser can lead to all kinds of security problems,
+why does such a concept exists?
+A11. If a system lacks a superuser, then It has two options
+1. all ordinary users are in fact superusers.
+2. all ordinary users aren't superusers, hence cannot made certain system calls.
+Is pretty clear they are both bad options, (1) an ordinary users could mess the system up by accident or an atacker
+intruding on the computer could have full access to all system features; (2) this could make a system unusable because
+users couldn't create inodes and therefore many any use of files. Therefore we conclude that the best options is to have
+a superuser as a separate entity.
+
+Q12. All versions of UNIX support file naming using both absolute paths and relative paths.
+Would it be possible to dispose of one of these and just use the other? If so, which would you suggest keeping?
+A12. Yes, absolute paths because there's no ambiguity on the file we are referring to and we can change
+the root for an app if we don't want it messing up in the tree.
+
+Q13. Why is the process table needed in a timesharing system?
+Is it also needed in p.c. systems in which only one process exists, that process taking over the entire machine
+until it is finished?
+A13. A process table is needed because when switching for another process it needs to save the current state of the
+leaving process so can be returned later, though this is multiprogramming reason, a timesharing reason is to allow
+users to evenly use the available resources (the table index works as a queue), 
+this makes users feel that they have the computer for they own.
+
+Q14.
+A14.
