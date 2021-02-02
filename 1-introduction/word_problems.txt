@@ -94,10 +94,12 @@ intruding on the computer could have full access to all system features; (2) thi
 users couldn't create inodes and therefore many any use of files. Therefore we conclude that the best options is to have
 a superuser as a separate entity.
 
+
 Q12. All versions of UNIX support file naming using both absolute paths and relative paths.
 Would it be possible to dispose of one of these and just use the other? If so, which would you suggest keeping?
 A12. Yes, absolute paths because there's no ambiguity on the file we are referring to and we can change
 the root for an app if we don't want it messing up in the tree.
+
 
 Q13. Why is the process table needed in a timesharing system?
 Is it also needed in p.c. systems in which only one process exists, that process taking over the entire machine
@@ -107,5 +109,33 @@ leaving process so can be returned later, though this is multiprogramming reason
 users to evenly use the available resources (the table index works as a queue), 
 this makes users feel that they have the computer for they own.
 
-Q14.
-A14.
+Q14. What is the essential difference between a block special file and a character special file?
+A14. Block special file is read-only and Character special file is write-only.
+
+
+Q15. In MINIX 3 if user 2 links to a file owned by user 1, then 1 removes the file, 
+What happens when user 2 tries to read the file?
+A15. If user 1 removes using the unlink syscall or the delete instruction does it, then user 2 is still able
+to read the file. If the file is abruptly remove (i.e. just wipe or corrupt that memory) I don't know what happens.
+
+
+Q16. Are pipes an essential facility? Would major functionality be lost if they were not available?
+A16. No, it can be replaced by slowest methods (like writting to files and get programs to read that file in runtime).
+
+
+Q17. Modern consumer appliances such as stereos and digital cameras often have a display where commmands can be
+entered and the results of entering those commands can be viewed. These devices often have a primitive os inside.
+To what part of a pc software is the command processing via the stereo or camera's display similar to?
+A17. The shell.
+
+
+Q18. Windows does not have a fork system call, yet it is able to create new processes. 
+Make an educated guess about the semantics of the system call Windows uses to create new processes.
+A18. I think it should have a proccess table, to create a new process one needs to request for an index in the 
+table giving the amount of memory needed for the processs. Something like 
+    mkp(data, memory_size) -> process_table_index
+where data is the binary to be execute and memory_size is the memory needed to run the process successfully.
+
+
+Q19. Why is the chroot syscall limited to the superuser? (Hint: think about protection problems)
+A19. 
