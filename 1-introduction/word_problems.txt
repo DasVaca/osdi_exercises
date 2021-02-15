@@ -138,4 +138,25 @@ where data is the binary to be execute and memory_size is the memory needed to r
 
 
 Q19. Why is the chroot syscall limited to the superuser? (Hint: think about protection problems)
-A19. 
+A19. Taking the example of http, if ordinary users could change the root directory someone
+could throught the web take over an entire server hosting a website. 
+
+
+Q20. Examine the list of system calls in Fig 1-9. Which call do you think is likely to execute
+most quickly. Explain your answer.
+A20. The get<something> and set<something> (ie. getpid, setuid, etc), since it only modifies an struct loaded in memory
+I think it should be quite fast.
+
+
+Q21. Suppose that a computer can execute 1 billion instructions/sec and that a system
+call takes 1000 instructions, including the trap and all the context switching.
+How many system calls can the computer execute per second and still have half the CPU capacity
+for running application code?
+A21. probably 50000.
+
+
+Q22. There is a mknod system call in Fig 1-9. but there is no rmnod call.
+Does this mean that you have to be very, very careful about making nodes this way
+because there is no way to every remove them?
+A22. Yes but no, mknod creates special files, that is to say temporary files so I imagine
+they are deleted when the machine is off.
