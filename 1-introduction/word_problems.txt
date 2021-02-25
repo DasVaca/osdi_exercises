@@ -160,3 +160,22 @@ Does this mean that you have to be very, very careful about making nodes this wa
 because there is no way to every remove them?
 A22. Yes but no, mknod creates special files, that is to say temporary files so I imagine
 they are deleted when the machine is off.
+
+
+Q23. Why does MINIX 3 have a program update running in the background all the time?
+A23. To flush the block cache, so that when something breaks the damaged is reduced.
+
+
+Q24. Does it ever make sense to ignore the SIGALRM signal?
+A24. No, because is it not externally generated, in fact, one needs to requests for it.
+
+
+Q25. The client-server model is popular in distributed systems.
+Can it also be used in a single computer system? 
+A25. Sure, from the point of view of a running program, the call is made externally, whether this
+happens on the same machine or another doesn't matter.
+
+
+Q26. The initial version of the Pentium could not support a virtual machine monitor.
+What essentials characteristic is needed to allow a machine to be virtualizable?
+A26.  
